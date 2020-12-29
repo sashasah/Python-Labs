@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Лаб 6</title>
+ </head>
+ <body>
+ 
+  <h2>Текстовое однострочное поле ввода</h2>
+  <form action="handler.php">
+   <p><strong>Введите ваше имя</strong></p>
+   <p><input maxlength="25" size="40" value="Александр"></p>
+  </form>
+
+  <h2>Набор элементов checkbox</h2>
+  <form action="handler.php">
+   <p><strong>В каком году началась Вторая мировая война?</strong></p>
+   <p><input type="checkbox" name="a" value="1917"> 1917</p>
+   <p><input type="checkbox" name="a" value="1939" > 1939</p>
+   <p><input type="checkbox" name="a" value="1941" checked> 1941</p>
+   <p><input type="checkbox" name="a" value="1812"> 1812</p>
+   <p><input type="submit" value="Отправить"></p>
+  </form>
+
+  <h2>Набор радиокнопок</h2>
+  <form action="handler.php">
+   <p><strong>На чем вы сидите?</strong></p>
+    <p><input name="sit" type="radio" value="stul">Стул</p>
+    <p><input name="sit" type="radio" value="creslo" checked>Кресло</p>
+    <p><input name="sit" type="radio" value="stol"> Стол</p>
+	<p><input name="sit" type="radio" value="shkaf"> шкаф</p>
+  </form>
+
+  <h2>Текстовое поле ввода из нескольких строк</h2>
+ <head>
+  <meta charset="utf-8">
+  <title>Текстовое поле</title>
+ </head>
+ <body>
+ <form action="handler.php">
+  <p><b>Введите что-нибудь:</b></p>
+  <p><textarea name="comment"></textarea></p>
+  <p><input type="submit"></p>
+ </form>
+ </body>
+
+ <h2>Список</h2>
+ <ol>
+  <li>Microsoft</li>
+  <li>Google</li>
+  <li>Apple</li>
+  <li>IBM</li>
+</ol>
+
+ <h2>Выпадающий список</h2>
+ <select>
+	<option label="Андреев" value="1" selected>Андреев</option>
+	<option>Пахомкин</option>
+	<option>Рогозин</option>
+	<option>Толпаров</option>
+</select>
+
+<h2>Список на основе текстового поля</h2>
+<head>
+  <meta charset="utf-8">
+  <title>datalist</title>
+ </head>
+ <body>
+  <p>Фамилии:</p>
+  <p><input list="second_name">
+   <datalist id="second_name">
+    <option value="Андреев"></option>
+    <option value="Пахомкин"></option>
+    <option value="Рогозин"></option>
+	<option value="Толпаров"></option>
+   </datalist></p>
+ </body>
+
+<h2>Кнопка с изображением</h2>
+<head>
+  <meta charset="utf-8">
+  <title>Кнопка</title>
+ </head>
+ <body>
+  <form>
+   <p>
+   <button>
+    <img src="https://static3.depositphotos.com/1002188/181/v/950/depositphotos_1810975-stock-illustration-critical-error-icon.jpg" width="100" height="100" alt="" style="vertical-align:middle">
+    Кнопка с рисунком
+   </button></p>
+  </form>
+ </body>
+
+<h2>Кнопка отправки формы</h2>
+<head>
+  <meta charset="utf-8">
+  <title>Кнопка</title>
+ </head>
+ <body>
+  <form>
+   <p><input name="login"></p>
+   <p><input type="submit"></p>
+  </form>
+ </body>
+
+
+ </body>
+</html>
