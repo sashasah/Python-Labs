@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домащнее задание</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</head>
+<body style="background-color:#c7c7c7">
+
+ <div class="jumbotron jumbotron-fluid" style="background-color:#c7c7c7">
+        <div class="container">
+         <h1 class="display-4">{{ company.title }}</h1>
+            <p class="lead">{{ company.description }}</p>
+
+
+<div class="left-ads-display col-lg-8">
+    <div class="row">
+
+        <div class="desc1-right col-md-6 pl-lg-4">
+
+            <h5 class="editContent"></h5>
+            <ul>
+
+                <li style="list-style: none">
+
+{#                                  <span><b>Описание:</b>#}
+{#                                      {{ company.description }}#}
+{#                                  </span>#}
+                </li>
+
+
+                <div class="media">
+                 <div class="media-body">
+                    <h5 class="mt-0">Продукты:</h5>
+
+
+                <div class="media" style="width: 500px;" style="background-color:#c7c7c7">
+                <a class="mr-3" href="#"> </a>
+                {% for name in company.name.all %}
+                <div class="media-body" style="width: 800px;" style="background-color:#c7c7c7">
+                    <h5 class="mt-2 mb-1">{{ name.name }}</h5>
+                    <div class="card" style="background-color:#c7c7c7">
+                    <div class="card-body" style="background-color:#c7c7c7">
+                     {{ name.description }}
+                    </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                </div>
+                </div>
+                </div>
+
+
+            </li>
+            </ul>
+
+{#                <li style="list-style: none">#}
+{#                                    <span><b>Продукты:</b>#}
+{#                                        {% for name in company.name.all %}#}
+{#                                            <span><b>{{ name.name }}</b></span>#}
+{#                                            {{ '-' }}#}
+{#                                             {% for icecream in company.name.all %}#}
+{#                                            {{ icecream.description }}#}
+{#                                        {% endfor %}#}
+{#                                        {% endfor %}#}
+{#                                    </span>#}
+{#                </li>#}
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

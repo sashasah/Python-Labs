@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домащнее задание</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</head>
+<body style="background-color:#c7c7c7" >
+
+<div class="jumbotron jumbotron-fluid" style="background-color:#c7c7c7">
+  <div class="container">
+    <h1 class="display-4">Добро пожаловать</h1>
+    <p class="lead">Здесь содержится информация о производителях мороженного в России</p>
+
+<hr class="my-4">
+  <p>Компании и мороженное, которое они могут производить:</p>
+
+{% for company in company_list %}
+    <ul class="list-group" >
+        <li class="list-group-item" style="background-color:#c7c7c7">
+
+            <a href="{% url "company" pk=company.pk %}" class="editContent" >
+            {{ company.title }}
+            </a>
+            {{ '—' }}
+
+            {{ company.tagline }}
+
+{#            {% for  name in company.name.all %}#}
+{#                {{ name.name }}#}
+{#            {% endfor %}#}
+
+        </li>
+    </ul>
+{% endfor %}
+
+  </div>
+</div>
+</body>
+</html>
